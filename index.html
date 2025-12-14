@@ -81,11 +81,11 @@
       }
 
       .inline-logo {
-        height: 20px;
-        background: white;
-        padding: 2px 6px;
-        border-radius: 4px;
-        vertical-align: middle;
+        height: 22px;
+        width: auto;
+        background: transparent; /* 🔑 removes white */
+        padding: 0; /* 🔑 removes box */
+        border-radius: 0;
       }
 
       .header-actions {
@@ -224,7 +224,7 @@
           <p>
             QE Manager | Cloud, Automation &
             <img
-              src="https://images.icon-icons.com/2699/PNG/512/servicenow_logo_icon_168835.png"
+              src="https://media.licdn.com/dms/image/v2/D560BAQG-sNe0_VNRnQ/company-logo_200_200/B56Zak7lUsGgAI-/0/1746523805288/servicenow_logo?e=1767225600&v=beta&t=KLSVjZj2nmPat6pM29oPNmR5nwSMV2mV1YNVO36yo2I"
               class="inline-logo"
             />
             ServiceNow
@@ -258,6 +258,7 @@
         <li>ServiceNow & ITOM Domain</li>
         <li>API Automation (Java, REST)</li>
         <li>UI Automation (Selenium)</li>
+        <li>Full Stack Development</li>
         <li>DevOps: Terraform, Ansible, Docker, Kubernetes</li>
         <li>CI/CD, Shift-Left Testing</li>
       </ul>
@@ -362,19 +363,22 @@
         document.body.classList.toggle("dark");
       }
       function copyText(text) {
-        navigator.clipboard.writeText(text).then(() => {
-          alert("Copied: " + text);
-        });
+        navigator.clipboard.writeText(text).then(() => {});
       }
       function openYahooMail(email) {
         navigator.clipboard.writeText(email).then(() => {
           window.open("https://mail.yahoo.com/", "_blank");
         });
       }
+      // SCROLL TO TOP
 
       function scrollTopPage() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
+      // INITIAL PROFILE IMAGE
+      document.getElementById("profileImage").src =
+        "https://www.w3schools.com/howto/img_avatar.png";
+      // END
     </script>
   </body>
 </html>
