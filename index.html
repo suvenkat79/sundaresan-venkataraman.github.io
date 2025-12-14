@@ -329,12 +329,13 @@
         LinkedIn Profile
       </a>
 
-      <a href="tel:+918939708248">
+      <a href="javascript:void(0)" onclick="copyText('+91 89397 08248')">
         <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" />
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" />
         +91 89397 08248
       </a>
 
-      <a href="mailto:sundavenkat@yahoo.co.in">
+      <a href="#" onclick="openYahooMail('sundavenkat@yahoo.co.in')">
         <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" />
         sundavenkat@yahoo.co.in
       </a>
@@ -359,6 +360,16 @@
 
       function toggleTheme() {
         document.body.classList.toggle("dark");
+      }
+      function copyText(text) {
+        navigator.clipboard.writeText(text).then(() => {
+          alert("Copied: " + text);
+        });
+      }
+      function openYahooMail(email) {
+        navigator.clipboard.writeText(email).then(() => {
+          window.open("https://mail.yahoo.com/", "_blank");
+        });
       }
 
       function scrollTopPage() {
