@@ -28,56 +28,7 @@
         gap: 25px;
       }
 
-      /* PHOTO SPACE */
-      .profile-pic {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        background-color: #cbd5e1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 12px;
-        color: #334155;
-        flex-shrink: 0;
-      }
-
-      header h1 {
-        margin: 0;
-        font-size: 26px;
-      }
-
-      header p {
-        margin-top: 6px;
-        font-size: 14px;
-        opacity: 0.9;
-      }
-
-      section {
-        max-width: 900px;
-        margin: 20px auto;
-        background: white;
-        padding: 22px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      }
-
-      h2 {
-        font-size: 18px;
-        border-left: 4px solid #2563eb;
-        padding-left: 10px;
-        color: #0f172a;
-        margin-bottom: 10px;
-      }
-
-      p {
-        line-height: 1.6;
-      }
-
-      ul {
-        padding-left: 18px;
-      }
-
+      /* PROFILE PHOTO */
       .profile-wrapper {
         position: relative;
         width: 120px;
@@ -118,6 +69,61 @@
         display: none;
       }
 
+      header h1 {
+        margin: 0;
+        font-size: 26px;
+      }
+
+      header p {
+        margin: 6px 0;
+        font-size: 14px;
+        opacity: 0.9;
+      }
+
+      .inline-logo {
+        height: 20px;
+        background: white;
+        padding: 2px 6px;
+        border-radius: 4px;
+        vertical-align: middle;
+      }
+
+      .header-actions {
+        margin-top: 10px;
+      }
+
+      .header-actions button {
+        margin-right: 6px;
+        padding: 6px 10px;
+        font-size: 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background: #2563eb;
+        color: white;
+      }
+
+      section {
+        max-width: 900px;
+        margin: 20px auto;
+        background: white;
+        padding: 22px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      h2 {
+        font-size: 18px;
+        border-left: 4px solid #2563eb;
+        padding-left: 10px;
+        color: #0f172a;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        padding-left: 18px;
+      }
+
       li {
         margin-bottom: 6px;
       }
@@ -137,11 +143,40 @@
         margin-right: 8px;
       }
 
+      #experience li {
+        margin-bottom: 14px;
+      }
+
+      #experience p {
+        margin: 6px 0 0 0;
+        line-height: 1.6;
+      }
+
+      #experience span {
+        font-size: 12px;
+        color: #64748b;
+      }
+
       footer {
         text-align: center;
         padding: 15px;
         font-size: 12px;
         color: #555;
+      }
+
+      /* DARK MODE */
+      .dark {
+        background-color: #0f172a;
+        color: #e5e7eb;
+      }
+
+      .dark section {
+        background-color: #1e293b;
+        color: #e5e7eb;
+      }
+
+      .dark h2 {
+        color: #93c5fd;
       }
 
       @media (max-width: 600px) {
@@ -150,15 +185,24 @@
           text-align: center;
         }
       }
+      /* FIX CONTACT TEXT COLOR IN DARK MODE */
+      .dark .contact a {
+        color: #ffffff;
+      }
+
+      .dark .contact h2 {
+        color: #93c5fd; /* nice light blue heading */
+      }
+      .dark .contact a:hover {
+        color: #60a5fa;
+      }
     </style>
   </head>
 
   <body>
     <header>
       <div class="header-container">
-        <!-- PROFILE PHOTO WITH CAMERA -->
-
-        <!-- PROFILE PHOTO -->
+        <!-- PHOTO -->
         <div class="profile-wrapper">
           <img id="profileImage" class="profile-pic" />
 
@@ -175,10 +219,24 @@
         </div>
 
         <!-- TEXT -->
-        <div class="header-text">
+        <div>
           <h1>Sundaresan Venkataraman</h1>
-          <p>QE Manager | Cloud, Automation & ServiceNow</p>
+          <p>
+            QE Manager | Cloud, Automation &
+            <img
+              src="https://images.icon-icons.com/2699/PNG/512/servicenow_logo_icon_168835.png"
+              class="inline-logo"
+            />
+            ServiceNow
+          </p>
           <p>Bengaluru, India</p>
+
+          <div class="header-actions">
+            <button onclick="downloadResume()">Download Resume</button>
+            <button onclick="scrollToSection('skills')">Skills</button>
+            <button onclick="toggleTheme()">Dark / Light</button>
+            <button onclick="scrollTopPage()">Top</button>
+          </div>
         </div>
       </div>
     </header>
@@ -189,77 +247,74 @@
         Trustworthy quality engineering professional with 18 years of hands-on
         experience delivering high-quality software solutions. Proven leader
         with strong expertise in cloud platforms, automation frameworks, and
-        ServiceNow. Known for driving operational excellence, continuous
-        improvement, and building high-performing teams.
+        ServiceNow.
       </p>
     </section>
 
-    <section>
+    <section id="skills">
       <h2>Core Skills</h2>
       <ul>
         <li>Cloud Platforms: AWS, Azure, GCP, VMware</li>
-        <li>ServiceNow & ITSM Domain</li>
+        <li>ServiceNow & ITOM Domain</li>
         <li>API Automation (Java, REST)</li>
-        <li>UI Automation (Selenium, Hybrid Frameworks)</li>
+        <li>UI Automation (Selenium)</li>
         <li>DevOps: Terraform, Ansible, Docker, Kubernetes</li>
-        <li>CI/CD, Test Strategy, Shift-Left Testing</li>
+        <li>CI/CD, Shift-Left Testing</li>
       </ul>
     </section>
 
-    <section>
+    <section id="experience">
       <h2>Professional Experience</h2>
+
       <ul>
         <li>
-          <strong>QE Manager – ServiceNow</strong> (Jun 2023 – Present)
-          <br />Leading quality engineering strategy, defining standards and
-          metrics, driving automation across UI, API, and integrations,
-          mentoring QE teams, and ensuring reliability of multi-cloud ServiceNow
-          solutions.
+          <strong>QE Manager – ServiceNow</strong>
+          <span>(Jun 2023 – Present)</span>
+          <p>
+            Leading quality engineering strategy, defining standards and
+            metrics, driving automation across UI, API, and integrations,
+            mentoring QE teams, and ensuring reliability of multi-cloud
+            ServiceNow solutions.
+          </p>
+          <p><strong>Roles and Responsibility</strong></p>
         </li>
 
         <li>
-          <strong>Staff Software QA Engineer – ServiceNow</strong> (Apr 2018 –
-          May 2023) <br />Built robust automation frameworks, improved test
-          coverage, validated cloud governance integrations, and partnered with
-          cross-functional teams to deliver high-quality releases.
+          <strong>Staff Software QA Engineer – ServiceNow</strong>
+          <span>(Apr 2018 – May 2023)</span>
+          <p>
+            Built robust automation frameworks, improved test coverage,
+            validated cloud governance integrations, and partnered with
+            cross-functional teams to deliver high-quality releases.
+          </p>
         </li>
 
         <li>
           <strong>IT Consultant / Consultant – HCL Technologies</strong>
-          <br />Managed BladeLogic automation, server provisioning, patching,
-          compliance testing, and Selenium-based automation solutions.
+          <span>(Jun 2014 – Mar 2018)</span>
+          <p>
+            Managed BladeLogic automation, server provisioning, patching,
+            compliance testing, and Selenium-based automation solutions.
+          </p>
         </li>
 
         <li>
           <strong>Senior Software Engineer – BMC Software</strong>
-          <br />Developed shell and Perl automation frameworks, performed system
-          and compliance testing, and supported complex customer environments.
+          <span>(Jun 2012 – May 2014)</span>
+          <p>
+            Developed shell and Perl automation frameworks, performed system and
+            compliance testing, and supported complex customer environments.
+          </p>
         </li>
 
         <li>
           <strong>Team Leader – CSS Corp</strong>
-          <br />Led automation initiatives, monitored execution, reviewed test
-          cases, and delivered high-quality QA outcomes.
+          <span>(Jan 2006 – May 2012)</span>
+          <p>
+            Led automation initiatives, monitored execution, reviewed test
+            cases, and delivered high-quality QA outcomes.
+          </p>
         </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Education & Certifications</h2>
-      <ul>
-        <li>Master of Computer Applications – University of Madras</li>
-        <li>VMware Certified Professional – Data Center Virtualization</li>
-        <li>Cerfitied Full Stack Development</li>
-        <li>Bachelor of Science – St. Joseph’s College</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Awards & Achievements</h2>
-      <ul>
-        <li>LUMA Award – Q2, Bangalore</li>
-        <li>Wall of Fame – Pune</li>
-        <li>Star Performer Award</li>
       </ul>
     </section>
 
@@ -284,14 +339,31 @@
         sundavenkat@yahoo.co.in
       </a>
     </section>
-    <script>
-      // Function to load and display the uploaded photo
-      function loadPhoto(event) {
-        const image = document.getElementById("profileImage");
-        image.src = URL.createObjectURL(event.target.files[0]);
-      }
-    </script>
 
     <footer>© 2025 Sundaresan Venkataraman</footer>
+
+    <script>
+      function loadPhoto(event) {
+        document.getElementById("profileImage").src = URL.createObjectURL(
+          event.target.files[0]
+        );
+      }
+
+      function downloadResume() {
+        window.open("Sundaresan_Venkataraman_CV.pdf", "_blank");
+      }
+
+      function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      }
+
+      function toggleTheme() {
+        document.body.classList.toggle("dark");
+      }
+
+      function scrollTopPage() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
   </body>
 </html>
