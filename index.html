@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sundaresan Venkataraman | QE Manager</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f4f6f8;
+        color: #333;
+        font-size: 14px;
+      }
+
+      header {
+        background: #0f172a;
+        color: white;
+        padding: 30px 20px;
+      }
+
+      .header-container {
+        max-width: 900px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+      }
+
+      /* PHOTO SPACE */
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #cbd5e1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        color: #334155;
+        flex-shrink: 0;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 26px;
+      }
+
+      header p {
+        margin-top: 6px;
+        font-size: 14px;
+        opacity: 0.9;
+      }
+
+      section {
+        max-width: 900px;
+        margin: 20px auto;
+        background: white;
+        padding: 22px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      h2 {
+        font-size: 18px;
+        border-left: 4px solid #2563eb;
+        padding-left: 10px;
+        color: #0f172a;
+        margin-bottom: 10px;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      ul {
+        padding-left: 18px;
+      }
+
+      .profile-wrapper {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        flex-shrink: 0;
+      }
+
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #d1d5db;
+        object-fit: cover;
+        display: block;
+      }
+
+      .camera-icon {
+        position: absolute;
+        bottom: 6px;
+        right: 6px;
+        width: 32px;
+        height: 32px;
+        background-color: #2563eb;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .camera-icon img {
+        width: 16px;
+        height: 16px;
+        filter: invert(1);
+      }
+
+      #photoUpload {
+        display: none;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      .contact a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: 14px;
+        margin-top: 8px;
+        color: #111827;
+      }
+
+      .contact img {
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        font-size: 12px;
+        color: #555;
+      }
+
+      @media (max-width: 600px) {
+        .header-container {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <!-- PROFILE PHOTO WITH CAMERA -->
+
+        <!-- PROFILE PHOTO -->
+        <div class="profile-wrapper">
+          <img id="profileImage" class="profile-pic" />
+
+          <label for="photoUpload" class="camera-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" />
+          </label>
+
+          <input
+            type="file"
+            id="photoUpload"
+            accept="image/*"
+            onchange="loadPhoto(event)"
+          />
+        </div>
+
+        <!-- TEXT -->
+        <div class="header-text">
+          <h1>Sundaresan Venkataraman</h1>
+          <p>QE Manager | Cloud, Automation & ServiceNow</p>
+          <p>Bengaluru, India</p>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Trustworthy quality engineering professional with 18 years of hands-on
+        experience delivering high-quality software solutions. Proven leader
+        with strong expertise in cloud platforms, automation frameworks, and
+        ServiceNow. Known for driving operational excellence, continuous
+        improvement, and building high-performing teams.
+      </p>
+    </section>
+
+    <section>
+      <h2>Core Skills</h2>
+      <ul>
+        <li>Cloud Platforms: AWS, Azure, GCP, VMware</li>
+        <li>ServiceNow & ITSM Domain</li>
+        <li>API Automation (Java, REST)</li>
+        <li>UI Automation (Selenium, Hybrid Frameworks)</li>
+        <li>DevOps: Terraform, Ansible, Docker, Kubernetes</li>
+        <li>CI/CD, Test Strategy, Shift-Left Testing</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+      <ul>
+        <li>
+          <strong>QE Manager – ServiceNow</strong> (Jun 2023 – Present)
+          <br />Leading quality engineering strategy, defining standards and
+          metrics, driving automation across UI, API, and integrations,
+          mentoring QE teams, and ensuring reliability of multi-cloud ServiceNow
+          solutions.
+        </li>
+
+        <li>
+          <strong>Staff Software QA Engineer – ServiceNow</strong> (Apr 2018 –
+          May 2023) <br />Built robust automation frameworks, improved test
+          coverage, validated cloud governance integrations, and partnered with
+          cross-functional teams to deliver high-quality releases.
+        </li>
+
+        <li>
+          <strong>IT Consultant / Consultant – HCL Technologies</strong>
+          <br />Managed BladeLogic automation, server provisioning, patching,
+          compliance testing, and Selenium-based automation solutions.
+        </li>
+
+        <li>
+          <strong>Senior Software Engineer – BMC Software</strong>
+          <br />Developed shell and Perl automation frameworks, performed system
+          and compliance testing, and supported complex customer environments.
+        </li>
+
+        <li>
+          <strong>Team Leader – CSS Corp</strong>
+          <br />Led automation initiatives, monitored execution, reviewed test
+          cases, and delivered high-quality QA outcomes.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education & Certifications</h2>
+      <ul>
+        <li>Master of Computer Applications – University of Madras</li>
+        <li>VMware Certified Professional – Data Center Virtualization</li>
+        <li>Cerfitied Full Stack Development</li>
+        <li>Bachelor of Science – St. Joseph’s College</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Awards & Achievements</h2>
+      <ul>
+        <li>LUMA Award – Q2, Bangalore</li>
+        <li>Wall of Fame – Pune</li>
+        <li>Star Performer Award</li>
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+
+      <a
+        href="https://www.linkedin.com/in/sundaresan-venkataraman-520193162"
+        target="_blank"
+      >
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />
+        LinkedIn Profile
+      </a>
+
+      <a href="tel:+918939708248">
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" />
+        +91 89397 08248
+      </a>
+
+      <a href="mailto:sundavenkat@yahoo.co.in">
+        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" />
+        sundavenkat@yahoo.co.in
+      </a>
+    </section>
+    <script>
+      // Function to load and display the uploaded photo
+      function loadPhoto(event) {
+        const image = document.getElementById("profileImage");
+        image.src = URL.createObjectURL(event.target.files[0]);
+      }
+    </script>
+
+    <footer>© 2025 Sundaresan Venkataraman</footer>
+  </body>
+</html>
